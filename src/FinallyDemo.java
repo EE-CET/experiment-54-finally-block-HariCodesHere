@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class FinallyDemo {
     
-        // TODO: Read a and b
-        
-        // TODO: try block
-        // Perform division
-        // Print "Result: " + result
-        
-        // TODO: catch ArithmeticException e
-        // Print "Error: " + e.getMessage()
-        
-        // TODO: finally block
-        // Print "Finally block executed"
-    }
+        public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int a = sc.nextInt();
+                int b=sc.nextInt();
+
+                try{
+                        int c = a/b;
+                        System.out.println(c);
+                }
+                catch(ArithmeticException ex){
+                        System.out.println("Divide by zero error");
+                }
+                finally {
+                        System.out.println("Finally block executed");
+                }
+        }
 }
